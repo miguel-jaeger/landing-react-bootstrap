@@ -1,14 +1,21 @@
-// src/App.jsx
 import React from 'react';
 
 function App() {
   return (
     <>
-      {/* 1. Navbar */}
+      {/* Navbar */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Soluciones Web S.A.</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
@@ -27,51 +34,66 @@ function App() {
         </div>
       </nav>
 
-      {/* 2. Hero Section */}
-      <div className="container-fluid bg-light p-5 text-center">
-        <h1 className="display-4">¡Impulsa tu negocio al siguiente nivel!</h1>
-        <p className="lead">Somos tu socio tecnológico para crear soluciones digitales innovadoras y escalables.</p>
-        <a className="btn btn-primary btn-lg" href="#" role="button">Conoce Más</a>
-      </div>
+      {/* Contenido principal centrado */}
+      <main
+        className="d-flex flex-column justify-content-center align-items-center text-center"
+        style={{ minHeight: "80vh" }} // 80% de la altura de la pantalla, dejando espacio para navbar y footer
+      >
+        <div className="container">
+          {/* Hero */}
+          <div className="bg-light p-5 rounded-3 shadow-sm mb-5">
+            <h1 className="display-4">¡Impulsa tu negocio al siguiente nivel!</h1>
+            <p className="lead">
+              Somos tu socio tecnológico para crear soluciones digitales innovadoras y escalables.
+            </p>
+            <a className="btn btn-primary btn-lg" href="#" role="button">
+              Conoce Más
+            </a>
+          </div>
 
-      {/* 3. Sección de Características (Servicios) */}
-      <div className="container my-5">
-        <h2 className="text-center mb-4">Nuestros Servicios</h2>
-        <div className="row">
-          {/* Característica 1 */}
-          <div className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm">
-              <div className="card-body text-center">
-                <h5 className="card-title">Desarrollo Web a Medida</h5>
-                <p className="card-text">Creamos sitios y aplicaciones web robustas, seguras y optimizadas para cualquier dispositivo.</p>
+          {/* Servicios */}
+          <h2 className="my-4">Nuestros Servicios</h2>
+          <div className="row">
+            <div className="col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-body">
+                  <h5 className="card-title">Desarrollo Web a Medida</h5>
+                  <p className="card-text">
+                    Creamos sitios y aplicaciones web robustas, seguras y optimizadas para cualquier dispositivo.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          {/* Característica 2 */}
-          <div className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm">
-              <div className="card-body text-center">
-                <h5 className="card-title">Soluciones Móviles</h5>
-                <p className="card-text">Diseñamos y desarrollamos aplicaciones móviles intuitivas para iOS y Android.</p>
+            <div className="col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-body">
+                  <h5 className="card-title">Soluciones Móviles</h5>
+                  <p className="card-text">
+                    Diseñamos y desarrollamos aplicaciones móviles intuitivas para iOS y Android.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          {/* Característica 3 */}
-          <div className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm">
-              <div className="card-body text-center">
-                <h5 className="card-title">Consultoría Tecnológica</h5>
-                <p className="card-text">Te ayudamos a elegir la mejor tecnología y estrategia para tus proyectos digitales.</p>
+            <div className="col-md-4 mb-4">
+              <div className="card h-100 shadow-sm">
+                <div className="card-body">
+                  <h5 className="card-title">Consultoría Tecnológica</h5>
+                  <p className="card-text">
+                    Te ayudamos a elegir la mejor tecnología y estrategia para tus proyectos digitales.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* 4. Footer */}
-      <footer className="bg-dark text-white text-center p-3 mt-auto">
-        <div className="container">
-          <p className="mb-0">&copy; 2024 Soluciones Web S.A. Todos los derechos reservados.</p>
+      {/* Footer */}
+      <footer className="bg-dark text-white text-center p-3">
+        <div className="container-fluid">
+          <p className="mb-0">
+            &copy; 2024 Soluciones Web S.A. Todos los derechos reservados.
+          </p>
         </div>
       </footer>
     </>
